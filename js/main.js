@@ -45,9 +45,6 @@ var flipCard = function (card) {
   setTimeout(checkForMatch, 1000);
 };
 
-//function myFunction() {
-  //  var reset = cardElement.setAttribute("images/back.png");
-
 var createBoard = function (){
   var board = document.getElementById("game-board");
 
@@ -66,7 +63,11 @@ var createBoard = function (){
   }
 };
 
-createBoard();
+function resetGameboard() {
+  var board= document.getElementById("game-board");
+  board.innerHTML="";
+  cardsInPlay=[];
+  createBoard();
+}
 
-//Reset button
- //<input type="reset" value="Reset" onClick="window.location.reload()">
+createBoard();
